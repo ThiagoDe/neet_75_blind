@@ -18,6 +18,5 @@ class Solution:
 
         return not stack
 
-
 s = "()[]{}"
 print(Solution().isValid(s))
