@@ -6,7 +6,7 @@ k = 2
 
 def topKFrequent(nums, k):
     count = {}
-    freq = [[] for i in range(len(nums) + 1)]  # [ [],[],[],[],[],[] ]
+    freq = [[] for n in range(len(nums) + 1)]  # [ [],[],[],[],[],[] ]
 
     for n in nums:
         count[n] = 1 + count.get(n, 0) # get garantee default 0
