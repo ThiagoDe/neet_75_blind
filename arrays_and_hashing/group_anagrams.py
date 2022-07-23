@@ -1,13 +1,23 @@
+from collections import defaultdict
+
 def groupAnagrams(strs):
-    res = {}
+    res = defaultdict(list)
+    # for s in strs:
+    #     # print(s)
+    #     sortedS = ''.join(sorted(s))
+    #     # print(sortedS)
+    #     if sortedS not in res:
+    #         res[sortedS] = [s]
+    #     else:
+    #         res[sortedS].append(s)
+
+    # return res.values()
     for s in strs:
-        # print(s)
-        sortedS = ''.join(sorted(s))
-        # print(sortedS)
-        if sortedS not in res:
-            res[sortedS] = [s]
-        else:
-            res[sortedS].append(s)
+        count = [0] * 26
+        for c in s:
+            count[ord(c) - ord('a')] += 1
+
+        res[tuple(count)].append(s)
 
     return res.values()
 
