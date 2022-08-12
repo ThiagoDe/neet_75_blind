@@ -27,7 +27,6 @@ def groupAnagrams(strs):
     #         res[sortedS] = [s]
     #     else:
     #         res[sortedS].append(s)
-
     # return res.values()
     for s in strs: #O(m * n)
         count = [0] * 26 # count the char a-z (122 - 97)
