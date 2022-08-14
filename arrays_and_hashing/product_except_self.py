@@ -4,7 +4,7 @@ def productExceptSelf(nums):
     res = [1] * len(nums) # [1,1,1,1]
 
     prefix = 1
-    for i in range(len(nums)): # [1, 1, 2, 6]
+    for i in range(len(nums)): # [1, 1, 2, 6] (24) full length so the last operation computes 
         res[i] = prefix
         prefix *= nums[i]
 
