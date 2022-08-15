@@ -13,8 +13,7 @@ def productExceptSelf(nums):
         res[i] *= postfix
         postfix *= nums[i]
 
-    return res
-    
+    return res  
 
 print(productExceptSelf(nums))
 
