@@ -14,6 +14,7 @@ def productExceptSelf(nums):
         postfix *= nums[i]
 
     return res
+    
 
 print(productExceptSelf(nums))
 
