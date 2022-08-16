@@ -10,7 +10,6 @@ def lengthOfLongestSubstring(s):
         while s[r] in charSet: # d
             charSet.remove(s[l])
             l += 1
-        print(s[r])
         charSet.add(s[r]) # add (set)
         res = max(res, (r - l + 1)) # 0 - 0 + 1, 1 - 0 + 1, 2 - 1 + 1, 3 - 1 + 1
     return res # 1, 2, 2, 
