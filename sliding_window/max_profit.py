@@ -4,7 +4,7 @@ class Solution:
         max_prof = 0
 
         while r < len(prices):
-            if prices[l] < prices[r]:
+            if prices[l] < prices[r]: # buy low -> increment r += 1 try to find a higher price to sell
                 profit = prices[r] - prices[l]
                 max_prof = max(max_prof, profit)
             else:
