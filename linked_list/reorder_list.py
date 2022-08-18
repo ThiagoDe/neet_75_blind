@@ -1,5 +1,5 @@
 class Solution:
-    def reorderList(self, head: Optional[ListNode]) -> None:
+    def reorderList(self, head):
         slow, fast = head, head.next
 
         while fast and fast.next:
