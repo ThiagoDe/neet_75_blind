@@ -1,13 +1,19 @@
 class Solution:
     def reorderList(self, head):
-        slow, fast = head, head.next
-
-        while fast and fast.next:
+        # set two pointers to find the middle node and the last node
+        slow, fast = head, head.next 
+        # 1 -> 2 -> 3 -> 4 -> 5
+        #           s        f   f.next
+        # 1 -> 2 -> 3 -> 4 -> 
+        #      s         f   f.next
+        while fast and fast.next: # until fast.next is None
             slow = slow.next
             fast = fast.next.next
 
-        second = slow.next
-        slow.next = prev = None
+        # the head of the second part is slow(last from the first half) .next 
+        second = slow.next # cache in a temp
+        # use to pointers to 
+        slow.next = prev = None # set the last node of first haft points to None 
 
         while second:
             temp = second.next
