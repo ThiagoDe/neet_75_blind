@@ -23,7 +23,6 @@ class Solution:
 
         first, second = head, prev
 
-
         while second:
             temp1, temp2 = first.next, second.next
             first.next = second
