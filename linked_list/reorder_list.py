@@ -15,7 +15,6 @@ class Solution:
         # use to pointers to 
         slow.next = prev = None # set the last node of first haft points to None 
 
-
         while second:
             temp = second.next
             second.next = prev
