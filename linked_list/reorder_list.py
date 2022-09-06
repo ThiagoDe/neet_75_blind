@@ -10,7 +10,6 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
 
-
         # the head of the second part is slow(last from the first half) .next 
         second = slow.next # cache in a temp
         # use to pointers to 
